@@ -1,13 +1,6 @@
-# Docker image for Quipper
+# Debugging
 
-[Quipper][quipper] is an embedded, scalable functional programming language for quantum computing.
+For debugging, you can use this son of a gun:
 
-This repo creates a Docker image for Quipper.
-
-Once you've [installed Docker](https://docs.docker.com/engine/installation/), 
-you can use this image like this.
-
-    docker pull spikecurtis/quipper
-    docker run -v /path/to/your/code:/code spikecurtis/quipper quipper /code/mycode.hs
-
-[quipper]: http://www.mathstat.dal.ca/~selinger/quipper/
+    docker build -t ausbin/docquipper .
+    docker run -it --rm -v $(pwd):/quipper ausbin/docquipper bash
