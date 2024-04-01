@@ -14,7 +14,7 @@ deutsch_jozsa_circuit oracle = do
   -- initialize string of qubits
   top_qubits <- qinit (replicate (qubit_num oracle) False)
   bottom_qubit <- qinit True
-  label (top_qubit, bottom_qubit) ("|0⟩","|1⟩")
+  label (top_qubits, bottom_qubit) ("|0⟩","|1⟩")
   -- do the first hadamard
   mapUnary hadamard top_qubits
   hadamard_at bottom_qubit
