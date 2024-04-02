@@ -1,4 +1,4 @@
-This is a Docker container for [Quipper][1], a quantum programming
+This is a Docker image for [Quipper][1], a quantum programming
 language embedded in Haskell.
 
 Getting Started
@@ -7,7 +7,7 @@ Getting Started
 To use this:
 
     $ docker build -t ausbin/docquipper .
-    $ docker run -it --rm -v $(pwd):/quipper ausbin/docquipper quipper bv.hs
+    $ docker run --rm -v $(pwd):/quipper ausbin/docquipper quipper bv.hs
     $ ./bv
 
 (If you're not on amd64 Linux, that last command should probably be in
