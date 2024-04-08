@@ -6,6 +6,7 @@ Getting Started
 
 To use this:
 
+    $ git submodule update --
     $ docker build -t ausbin/docquipper .
     $ docker run --rm -v $(pwd):/quipper ausbin/docquipper quipper bv.hs
     $ ./bv
