@@ -15,6 +15,13 @@ RUN tar -C /tmp -xvf /tmp/$ARCHIVE_NAME.tgz \
     && cp -a /tmp/$ARCHIVE_NAME/scripts/quipper /tmp/$ARCHIVE_NAME/scripts/convert_template.sh /tmp/$ARCHIVE_NAME/scripts/convert_template.awk /root/.bin/ \
     && rm -rvf /tmp/$ARCHIVE_NAME
 
+COPY qasm.sh /root/.bin/qasm
+COPY quipper-qasm /tmp/quipper-qasm/
+WORKDIR /tmp/quipper-qasm/
+RUN ghc QasmPrinting \
+    && cp ./QasmPrinting /root/.bin/ \
+    && rm -rvf /tmp/quipper-qasm
+
 WORKDIR /quipper
 ENV PATH /root/.bin:$PATH
-CMD ['quipper']
+

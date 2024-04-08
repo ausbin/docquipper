@@ -11,6 +11,12 @@ To use this:
     $ docker run --rm -v $(pwd):/quipper ausbin/docquipper quipper bv.hs
     $ ./bv
 
+To convert bv.hs to bv.qasm (credits to onestruggler) use:
+    $ docker run -it --rm -v $(pwd):/quipper ausbin/docquipper qasm bv.hs
+
+Link to onestruggler's og repo:
+https://github.com/onestruggler/quipper-qasm.git
+
 (If you're not on amd64 Linux, that last command should probably be in
 the Docker container instead.)
 
