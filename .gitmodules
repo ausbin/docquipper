@@ -1,0 +1,3 @@
+[submodule "quipper-qasm"]
+	path = quipper-qasm
+	url = https://github.com/onestruggler/quipper-qasm.git
