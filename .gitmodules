@@ -1,3 +1,4 @@
 [submodule "quipper-qasm"]
 	path = quipper-qasm
-	url = https://github.com/onestruggler/quipper-qasm.git
+	url = https://github.com/ausbin/quipper-qasm.git
+	branch = bugfix/measure

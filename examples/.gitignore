@@ -1,0 +1,4 @@
+# Gigabrain idea: ignore practically everything and then un-ignore the things
+# that actually matter. https://stackoverflow.com/a/51561254/321301
+*_quipper*
+!*.hs
