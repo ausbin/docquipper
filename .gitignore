@@ -2,5 +2,3 @@
 *.dyn_o
 *.hi
 *.o
-# Examples
-/bv
