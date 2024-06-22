@@ -21,6 +21,12 @@ https://github.com/onestruggler/quipper-qasm.git
 (If you're not on amd64 Linux, that last command should probably be in
 the Docker container instead.)
 
+Examples
+========
+
+The example programs in `examples/` are reconstructed from ["Five Quantum
+Algorithms Using Quipper" by Siddiqui, Islam, and Shehab (2014)][4].
+
 Hacks
 =====
 
@@ -44,3 +50,4 @@ distribution of Quipper. So the `Dockerfile` substitutes the Haskell
 [1]: https://www.mathstat.dal.ca/~selinger/quipper/
 [2]: https://hackage.haskell.org/package/quipper-language-0.9.0.0/src/programs/quipper-pp.hs
 [3]: https://hub.docker.com/_/haskell/
+[4]: https://arxiv.org/abs/1406.4481
