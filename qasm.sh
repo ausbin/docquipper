@@ -7,5 +7,5 @@ fi
 file=$1
 shift
 quipper "$file"
-QasmPrinting <("./${file%.hs}" "$@") > "${file%.hs}".qasm
+QasmPrinting -3 -inline <("./${file%.hs}" "$@") > "${file%.hs}".qasm
 printf 'done writing to %s\n' "${file%.hs}.qasm"
