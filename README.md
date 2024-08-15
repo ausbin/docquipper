@@ -1,22 +1,25 @@
-This is a Docker image for [Quipper][1], a quantum programming
-language embedded in Haskell.
+This is a Docker image for [Quipper][1], a quantum programming language
+embedded in Haskell. It can be used to convert Quipper code to OpenQASM 2 or 3.
 
 Getting Started
 ===============
 
-To use this:
+To build the image:
 
-    $ git submodule update --
+    $ git submodule update --init
     $ docker build -t ausbin/docquipper .
     $ docker run --rm -v $(pwd):/quipper ausbin/docquipper quipper bv.hs
     $ ./bv
+
+Alternatively, you can `docker pull ausbin/docquipper` to grab my prebuilt copy
+from Docker Hub.
 
 To convert bv.hs to bv.qasm (credits to onestruggler) use:
 
     $ docker run -it --rm -v $(pwd):/quipper ausbin/docquipper qasm bv.hs
 
-Link to onestruggler's og repo:
-https://github.com/onestruggler/quipper-qasm.git
+Link to onestruggler's og repo: https://github.com/onestruggler/quipper-qasm
+(note this repo uses [a fork][5] though)
 
 (If you're not on amd64 Linux, that last command should probably be in
 the Docker container instead.)
@@ -51,3 +54,4 @@ distribution of Quipper. So the `Dockerfile` substitutes the Haskell
 [2]: https://hackage.haskell.org/package/quipper-language-0.9.0.0/src/programs/quipper-pp.hs
 [3]: https://hub.docker.com/_/haskell/
 [4]: https://arxiv.org/abs/1406.4481
+[5]: https://github.com/ausbin/quipper-qasm
